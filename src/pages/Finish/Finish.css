@@ -1,0 +1,56 @@
+.game-page.finish-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  align-items: center;
+  padding: max(32px, env(safe-area-inset-top)) 16px
+    max(32px, env(safe-area-inset-bottom));
+
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.finish-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+}
+
+.finish-container .top-secret {
+  margin-bottom: 0;
+}
+
+.finish-container .start-button {
+  margin-top: 0;
+}
+
+.finish-title {
+  margin: 0;
+  color: var(--red, #ff202a);
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(36px, 11vw, 52px);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 0 0 30px rgba(255, 32, 42, 0.35);
+  animation: finish-in 500ms ease both;
+}
+
+@keyframes finish-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .finish-title {
+    animation: none;
+  }
+}
