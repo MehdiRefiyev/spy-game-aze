@@ -1,25 +1,143 @@
 {
-  "Heyvanlar": ["it", "pişik", "at", "inək", "qoyun", "keçi", "donuz", "dovşan", "ilan", "şir", "fil", "zürafə", "meymun", "ayı", "qurd", "tülkü", "dələ", "siçan", "qurbağa", "timsah", "delfin", "balina", "köpəkbalığı", "balıq", "quş", "qartal", "bayquş", "pinqvin", "kəpənək", "arı", "qarışqa", "hörümçək", "ilbiz", "tısbağa", "kenquru", "eşşək", "dəvə", "maral", "pələng", "panda", "xoruz", "toyuq", "ördək", "göyərçin", "ağcaqanad"],
-  "Meyvələr": ["alma", "armud", "banan", "portağal", "limon", "üzüm", "çiyələk", "nar", "albalı", "şaftalı", "ərik", "qarpız", "ananas", "mango", "kivi", "heyva", "gavalı", "qoz", "fındıq", "badam", "tut", "əncir", "xurma", "moruq", "hindistan cevizi", "avokado", "papaya", "greyfrut", "mandarin", "qaragilə", "gilas", "zoğal"],
-  "Tərəvəzlər": ["pomidor", "xiyar", "kartof", "soğan", "sarımsaq", "kələm", "badımcan", "bibər", "yerkökü", "çuğundur", "pırasa", "ispanaq", "balqabaq", "qarğıdalı", "brokoli", "turp", "şalgam", "reyhan", "kişniş", "nanə", "kərəviz", "bamya", "göbələk", "zəncəfil", "cəfəri", "lobya", "noxud", "mərcimək", "batat", "qabaq", "acı bibər", "turşu xiyar"],
-  "Peşələr": ["həkim", "müəllim", "mühəndis", "polis", "əsgər", "aşpaz", "sürücü", "fermer", "memar", "jurnalist", "pilot", "diş həkimi", "tibb bacısı", "vəkil", "hakim", "elektrik", "santexnik", "dülgər", "bərbər", "dərzi", "çörəkçi", "qəssab", "proqramçı", "aktyor", "müğənni", "rəssam", "rəqqas", "fotoqraf", "astronavt", "alim", "mühasib", "ofisiant", "dənizçi", "tərcüməçi", "kitabxanaçı", "dizayner", "baytar", "eczaçı", "rejissor", "şair", "yazıçı", "heykəltəraş"],
-  "Rənglər": ["qırmızı", "göy", "yaşıl", "sarı", "qara", "ağ", "narıncı", "bənövşəyi", "boz", "qəhvəyi", "çəhrayı", "firuzəyi", "qızılı", "gümüşü", "bej", "bordo", "lilə", "xaki", "tünd göy", "açıq yaşıl", "açıq göy", "tünd qırmızı", "dəniz mavisi", "limon sarısı", "qar ağı", "kömür qarası", "fil sümüyü", "gül rəngi", "şokolad rəngi", "pastel", "neon"],
-  "Əşyalar": ["stol", "stul", "kreslo", "çarpayı", "qapı", "pəncərə", "televizor", "soyuducu", "kompüter", "telefon", "qələm", "kitab", "çanta", "saat", "güzgü", "lampa", "çətir", "şüşə", "fincan", "boşqab", "qaşıq", "çəngəl", "bıçaq", "tava", "qazan", "süpürgə", "yastıq", "xalça", "pərdə", "rəf", "şkaf", "qayçı", "kağız", "karandaş", "silgi", "ayaqqabı", "şapka", "eynək", "açar", "şam", "balış", "fırça"],
-  "Nəqliyyat": ["avtomobil", "avtobus", "qatar", "təyyarə", "gəmi", "velosiped", "motosiklet", "metro", "tramvay", "taksi", "helikopter", "yük maşını", "raket", "qayıq", "traktor", "ambulans", "trolleybus", "skuter", "paraşüt", "balon", "bərə", "hava limanı", "vağzal", "təkər", "sükan", "mühərrik", "fənər", "körpü", "dayanacaq", "bilet", "sərnişin", "svetofor", "relslər", "reys", "terminal"],
-  "Yerlər": ["məktəb", "xəstəxana", "park", "bazar", "kitabxana", "muzey", "restoran", "kafe", "stadion", "bank", "teatr", "kino", "otel", "mağaza", "dəniz", "meşə", "dağ", "çay", "göl", "şəhər", "kənd", "küçə", "bağ", "çöl", "səhra", "ada", "mağara", "qala", "saray", "məscid", "kilsə", "universitet", "poliklinika", "aptek", "hamam", "sahil", "körfəz", "vadi", "təpə", "meydan", "bulvar", "fabrik", "zavod", "anbar", "laboratoriya", "dəhliz", "zirzəmi", "çardaq", "həyət"],
-  "İdman": ["futbol", "basketbol", "voleybol", "tennis", "üzgüçülük", "boks", "güləş", "qolf", "xokkey", "qaçış", "atletika", "şahmat", "karate", "cüdo", "gimnastika", "xizək", "snoubord", "reqbi", "beysbol", "badminton", "dart", "sörf", "alpinizm", "marafon", "triatlon", "hendbol", "çəki qaldırma", "top", "qol", "hakim fit", "çempion", "medal", "kubok", "yarış", "komanda", "oyunçu", "məşqçi", "start xətti", "finiş", "rekord"],
-  "Sifətlər": ["böyük", "kiçik", "isti", "soyuq", "sürətli", "yavaş", "gözəl", "çirkin", "uca", "alçaq", "yüngül", "ağır", "zəngin", "kasıb", "xoşbəxt", "kədərli", "cəsur", "qorxaq", "ağıllı", "sakit", "qoca", "gənc", "uzun", "qısa", "dərin", "sığ", "quru", "yaş", "təmiz", "çirkli", "sərt", "yumşaq", "şirin", "acı", "duzlu", "turş", "parlaq", "qaranlıq", "yeni", "köhnə", "gizli", "açıq", "bağlı", "möhkəm", "zərif", "sehrli", "məşhur"],
-  "Casusluq": ["casus", "agent", "şifrə", "missiya", "kod adı", "gizli", "ləqəb", "pasport", "dron", "sirr", "izləmə", "hədəf", "xəritə", "qəfil", "sükut", "maska", "kamera", "radio", "kilid", "sığınacaq", "təhlükə", "ikiqat agent", "əks-kəşfiyyat", "sızma", "təcili çıxış"],
-  "Musiqi alətləri": ["tar", "kamança", "balaban", "qaval", "nağara", "piano", "gitara", "skripka", "baraban", "akkordeon", "saksafon", "fleyta", "arfa", "zurna", "qarmon", "tütək", "dəf", "simli alət", "xor", "orkestr", "dirijor", "not", "notlar", "pərdə", "kökə", "mahnı"],
-  "Kosmos": ["ulduz", "planet", "peyk", "raket", "kometa", "Ay", "Günəş", "Mars", "qalaktika", "astronavt", "orbit", "kosmik stansiya", "meteorit", "boşluq", "teleskop", "Yer kürəsi", "Venera", "Yupiter", "şəfəq", "qara dəlik", "kosmik gəmi", "səma cismi", "şimal işığı", "asteroid", "kosmodrom"],
-  "Yemək": ["plov", "dolma", "kabab", "lavaş", "qutab", "piti", "dovğa", "bozbaş", "şəkərbura", "paxlava", "xəngəl", "halva", "şorba", "omlet", "pizza", "sendviç", "salat", "makaron", "sosiska", "börək", "tort", "dondurma", "şokolad", "bal", "pendir", "çörək", "düyü", "yoğurd", "kefir", "ayran"],
-  "Hisslər": ["sevinc", "qəzəb", "qorxu", "kədər", "təəccüb", "həyəcan", "utanc", "sakitlik", "nifrət", "məmnunluq", "tənhalıq", "ümid", "həsəd", "maraq", "kin", "sevgi", "həyəcan", "xəcalət", "qürur", "narahatlıq", "rahatlıq", "şübhə", "heyranlıq", "peşmanlıq", "minnətdarlıq"],
-  "Mifik varlıqlar": ["əjdaha", "cin", "pəri", "div", "mələk", "cadugər", "sehrbaz", "simurq", "dev", "vampir", "qurd-adam", "sehrli çubuq", "xəzinə", "əfsanə", "nağıl qəhrəmanı", "gizli qapı", "tilsim", "kəhkəşan", "qılınc", "qalxan"],
-  "Hava hadisələri": ["yağış", "qar", "boran", "şimşək", "göy gurultusu", "duman", "qasırğa", "zəlzələ", "sel", "dolu", "şeh", "leysan", "külək", "tufan", "bulud", "göy qurşağı", "ildırım", "yay istisi", "şaxta", "günəş tutulması", "ay tutulması", "qum fırtınası"],
-  "Geyim": ["köynək", "şalvar", "papaq", "ətək", "jaket", "kostyum", "sviter", "şal", "corab", "qalstuk", "qurşaq", "palto", "gödəkçə", "çəkmə", "sandal", "kəmər", "əlcək", "gəlinlik", "xalat", "şort", "futbolka", "dəri gödəkçə", "bəzək", "sırğa", "üzük", "boyunbağı", "bilərzik"],
-  "Texnologiya": ["robot", "internet", "veb-sayt", "proqram", "server", "klaviatura", "monitor", "şəbəkə", "batareya", "sensor", "çip", "noutbuk", "planşet", "naviqator", "kabel", "virus", "parol", "tətbiq", "kod", "veb-kamera", "qulaqcıq", "yaddaş kartı", "USB", "serverlər", "bulud", "simsiz", "dron", "süni intellekt"],
-  "Oyuncaqlar": ["kukla", "oyuncaq ayı", "yoyo", "pazl", "dama", "domino", "uçurtma", "fırfıra", "əl topu", "kubik", "konstruktor", "maşınçıq", "çubuq atma oyunu", "balon", "şarlar", "kartlar", "oyun kartları", "tapmaca", "evcik oyunu", "xizək oyuncağı", "qarmaqlı oyun"],
-  "Tikililər": ["qüllə", "minarə", "körpü", "tunel", "qala divarı", "hasar", "eyvan", "dam", "pilləkən", "ev", "qəsr", "bina", "mənzil", "piramida", "heykəl", "fontan", "kolonna", "tağ", "pəncərə tağı", "dayaq", "təpəlik", "qüllə saatı", "gözətçi qülləsi"],
-  "Alətlər": ["çəkic", "mişar", "bürgü", "mismar", "sıxac", "ölçü lenti", "səviyyə", "cımbız", "açar dəsti", "pərgar", "rəndə", "yapışqan", "vint", "dişli", "qaşov", "bel", "küt", "pnevmatik qayçı", "elektrik qazma", "təbər"],
-  "Tədbirlər": ["Novruz", "Ramazan bayramı", "Qurban bayramı", "Yeni il", "ad günü", "toy", "festival", "konsert", "sərgi", "yarmarka", "ekskursiya", "ziyafət", "məclis", "yubiley", "mərasim", "karnaval", "şənlik", "fənər şənliyi", "qonaqlıq", "tamaşa"]
+  "Animals": [
+    "dog", "cat", "horse", "cow", "sheep", "goat", "pig", "rabbit", "snake", "lion",
+    "elephant", "monkey", "bear", "wolf", "fox", "mouse", "frog", "turtle", "tiger",
+    "panda", "chicken", "duck", "bird", "fish", "dolphin", "shark", "bee", "spider",
+    "deer", "camel"
+  ],
+  "Fruits": [
+    "apple", "banana", "orange", "lemon", "grapes", "strawberry", "cherry", "peach",
+    "pear", "watermelon", "pineapple", "mango", "kiwi", "plum", "coconut", "avocado",
+    "blueberry", "raspberry", "melon", "fig", "date", "apricot", "pomegranate", "lime",
+    "papaya"
+  ],
+  "Professions": [
+    "doctor", "teacher", "engineer", "police officer", "soldier", "chef", "driver",
+    "farmer", "architect", "journalist", "pilot", "dentist", "nurse", "lawyer",
+    "electrician", "plumber", "carpenter", "barber", "baker", "programmer", "actor",
+    "singer", "dancer", "photographer", "scientist", "accountant", "waiter", "artist",
+    "builder", "firefighter"
+  ],
+  "Objects": [
+    "table", "chair", "bed", "door", "window", "television", "fridge", "computer",
+    "phone", "pen", "book", "bag", "watch", "mirror", "lamp", "umbrella", "bottle",
+    "cup", "plate", "spoon", "fork", "knife", "pan", "pillow", "carpet", "curtain",
+    "shelf", "scissors", "pencil", "wallet"
+  ],
+  "Transportation": [
+    "car", "bus", "train", "airplane", "ship", "bicycle", "motorcycle", "subway",
+    "taxi", "helicopter", "truck", "rocket", "boat", "tractor", "ambulance", "scooter",
+    "ferry", "van", "jeep", "motorboat", "school bus", "fire truck", "police car",
+    "skateboard", "train station", "airport", "ticket", "wheel", "engine", "traffic light"
+  ],
+  "Places": [
+    "school", "hospital", "park", "market", "library", "museum", "restaurant", "cafe",
+    "stadium", "bank", "theater", "cinema", "hotel", "shop", "beach", "forest",
+    "mountain", "river", "lake", "city", "village", "street", "garden", "desert",
+    "island", "cave", "castle", "university", "pharmacy", "airport"
+  ],
+  "Sports": [
+    "football", "basketball", "volleyball", "tennis", "swimming", "boxing", "wrestling",
+    "golf", "hockey", "running", "chess", "karate", "judo", "gymnastics", "skiing",
+    "rugby", "baseball", "badminton", "surfing", "climbing", "marathon", "cycling",
+    "handball", "weightlifting", "diving", "ball", "goal", "referee", "coach", "medal"
+  ],
+  "Adjectives": [
+    "big", "small", "hot", "cold", "fast", "slow", "beautiful", "ugly", "tall", "short",
+    "light", "heavy", "rich", "poor", "happy", "sad", "brave", "smart", "quiet", "old",
+    "young", "long", "deep", "dry", "wet", "clean", "dirty", "hard", "soft", "sweet"
+  ],
+  "Spycraft": [
+    "spy", "agent", "password", "mission", "secret", "code name", "disguise", "passport",
+    "drone", "target", "map", "camera", "radio", "lock", "safe house", "danger",
+    "double agent", "hidden door", "footprint", "clue", "message", "alarm", "key",
+    "escape", "secret room", "briefcase", "sunglasses", "microphone", "tracking device",
+    "hidden camera"
+  ],
+  "Musical Instruments": [
+    "piano", "guitar", "violin", "drum", "flute", "trumpet", "saxophone", "harp",
+    "accordion", "keyboard", "tambourine", "cello", "banjo", "ukulele", "clarinet",
+    "harmonica", "bell", "cymbals", "microphone", "speaker", "headphones", "song",
+    "singer", "band", "orchestra", "concert", "music", "dance", "stage", "guitar pick"
+  ],
+  "Space": [
+    "star", "planet", "satellite", "rocket", "comet", "Moon", "Sun", "Mars", "galaxy",
+    "astronaut", "orbit", "space station", "meteor", "telescope", "Earth", "Venus",
+    "Jupiter", "black hole", "spaceship", "alien", "spacesuit", "space helmet", "crater",
+    "universe", "spaceship window"
+  ],
+  "Food": [
+    "pizza", "burger", "sandwich", "salad", "pasta", "sausage", "cake", "ice cream",
+    "chocolate", "honey", "cheese", "bread", "rice", "yogurt", "soup", "pancake",
+    "omelet", "cookie", "popcorn", "French fries", "fried chicken", "hot dog", "noodles",
+    "sushi", "toast", "jam", "butter", "egg", "dumpling", "pie"
+  ],
+  "Feelings": [
+    "joy", "anger", "fear", "sadness", "surprise", "excitement", "shame", "calmness",
+    "hatred", "happiness", "loneliness", "hope", "envy", "curiosity", "love", "anxiety",
+    "embarrassment", "pride", "worry", "relief", "doubt", "admiration", "regret",
+    "gratitude", "jealousy"
+  ],
+  "Fantasy": [
+    "dragon", "fairy", "giant", "angel", "witch", "wizard", "ghost", "monster", "vampire",
+    "werewolf", "magic wand", "treasure", "magic spell", "secret door", "unicorn",
+    "fairy tale", "magic ring", "flying carpet", "talking animal", "magic mirror",
+    "haunted house", "invisible man", "magic sword", "cursed book", "hidden kingdom"
+  ],
+  "Weather": [
+    "rain", "snow", "storm", "lightning", "thunder", "fog", "hurricane", "flood", "hail",
+    "wind", "cloud", "rainbow", "heatwave", "frost", "sandstorm", "sunshine", "ice",
+    "snowstorm", "tornado", "drought", "puddle", "umbrella", "raincoat", "thunderstorm",
+    "weather forecast"
+  ],
+  "Clothing": [
+    "shirt", "trousers", "hat", "skirt", "jacket", "suit", "sweater", "scarf", "socks",
+    "tie", "belt", "coat", "hoodie", "boots", "sandals", "gloves", "dress", "robe",
+    "shorts", "T-shirt", "jeans", "sneakers", "pajamas", "swimsuit", "slippers",
+    "sunglasses", "ring", "necklace", "watch", "backpack"
+  ],
+  "Technology": [
+    "robot", "internet", "website", "software", "server", "keyboard", "monitor", "network",
+    "battery", "sensor", "chip", "laptop", "tablet", "GPS", "cable", "computer virus",
+    "password", "application", "code", "webcam", "headphones", "memory card", "USB drive",
+    "cloud storage", "Wi-Fi", "drone", "artificial intelligence", "printer", "mouse",
+    "charger"
+  ],
+  "Toys and Games": [
+    "doll", "teddy bear", "yo-yo", "puzzle", "checkers", "dominoes", "kite", "spinning top",
+    "toy car", "building blocks", "board game", "balloon", "playing cards", "riddle",
+    "hide-and-seek", "chessboard", "toy train", "rubber duck", "action figure", "marbles",
+    "jump rope", "video game", "remote control car", "toy robot", "water gun"
+  ],
+  "Buildings": [
+    "tower", "bridge", "tunnel", "fence", "balcony", "roof", "stairs", "house", "castle",
+    "apartment", "pyramid", "statue", "fountain", "column", "gate", "wall", "garage",
+    "skyscraper", "church", "mosque", "factory", "warehouse", "cabin", "barn", "lighthouse"
+  ],
+  "Tools": [
+    "hammer", "saw", "drill", "nail", "clamp", "tape measure", "level", "tweezers",
+    "wrench", "screwdriver", "compass", "glue", "screw", "shovel", "axe", "pliers",
+    "scissors", "ladder", "brush", "bucket", "rope", "flashlight", "knife", "needle",
+    "sewing machine"
+  ],
+  "Events and Celebrations": [
+    "birthday", "wedding", "New Year", "festival", "concert", "exhibition", "fair",
+    "excursion", "party", "gathering", "anniversary", "ceremony", "carnival", "parade",
+    "graduation", "competition", "football match", "family dinner", "picnic", "barbecue",
+    "fireworks", "surprise party", "award ceremony", "school trip", "costume party"
+  ],
+  "School": [
+    "teacher", "student", "classroom", "desk", "blackboard", "whiteboard", "notebook",
+    "textbook", "homework", "exam", "test", "lesson", "break", "backpack", "pencil case",
+    "ruler", "eraser", "sharpener", "calculator", "library", "principal", "classmate",
+    "school bus", "report card", "graduation", "science lab", "school bell", "project",
+    "presentation", "school uniform"
+  ],
+  "Everyday Activities": [
+    "sleeping", "cooking", "eating", "drinking", "walking", "running", "reading", "writing",
+    "singing", "dancing", "swimming", "shopping", "cleaning", "washing", "driving",
+    "studying", "working", "playing", "traveling", "fishing", "painting", "drawing",
+    "gardening", "baking", "fishing", "cycling", "watching TV", "taking photos",
+    "making coffee", "brushing teeth"
+  ]
 }
