@@ -254,3 +254,175 @@
     animation: none;
   }
 }
+
+/* ==========================================================
+   APPEND THIS BLOCK TO THE END OF Cards.css
+   ========================================================== */
+
+/* ===== Bigger / bolder gameplay text ===== */
+.cards-title {
+  font-size: clamp(34px, 10vw, 46px);
+}
+
+.game-meta {
+  margin: 10px 0 0;
+  color: #f3f3f3;
+  font-family: "Orbitron", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.game-meta strong {
+  color: var(--red, #ff202a);
+  font-size: 16px;
+}
+
+.card-number {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card-role {
+  color: #c8c8c8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.card-word {
+  font-size: clamp(26px, 9vw, 36px);
+  font-weight: 800;
+}
+
+.card-hint {
+  color: #c8c8c8;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cards-progress {
+  color: #c8c8c8;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.timer-label {
+  color: #c8c8c8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ===== Timer screen ===== */
+.timer-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.starter-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 18px 12px;
+  border: 1px solid var(--red, #ff202a);
+  border-radius: 14px;
+  background: linear-gradient(160deg, #240407, #060303);
+  box-shadow: 0 0 28px rgba(255, 32, 42, 0.25);
+}
+
+.starter-label {
+  color: #c8c8c8;
+  font-family: "Orbitron", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.starter-value {
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(40px, 14vw, 60px);
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 0 0 22px rgba(255, 32, 42, 0.7);
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid rgba(255, 32, 42, 0.45);
+  border-radius: 12px;
+  background: var(--panel, #120d0d);
+  text-align: center;
+}
+
+.info-item span {
+  color: #b0b0b0;
+  font-family: "Orbitron", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.info-item strong {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+/* ===== Stop timer ===== */
+.stop-button {
+  width: 100%;
+  min-height: 54px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 32, 42, 0.8);
+  border-radius: 36px;
+  background: transparent;
+  color: #ff6b72;
+  font-family: "Orbitron", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  transition: transform 180ms ease;
+}
+
+.stop-button:active {
+  transform: scale(0.98);
+}
+
+.stop-yes {
+  background: var(--red, #ff202a);
+  color: #080808;
+}
+
+.stop-confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stop-question {
+  margin: 0;
+  color: #f3f3f3;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.stop-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}

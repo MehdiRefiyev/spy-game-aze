@@ -1,15 +1,21 @@
 {
   "Animals": [
     "dog", "cat", "horse", "cow", "sheep", "goat", "pig", "rabbit", "snake", "lion",
-    "elephant", "monkey", "bear", "wolf", "fox", "mouse", "frog", "turtle", "tiger",
-    "panda", "chicken", "duck", "bird", "fish", "dolphin", "shark", "bee", "spider",
-    "deer", "camel"
+    "tiger", "elephant", "giraffe", "monkey", "bear", "wolf", "fox", "mouse", "frog",
+    "turtle", "panda", "penguin", "owl", "eagle", "duck", "chicken", "dolphin", "shark",
+    "whale", "crocodile", "kangaroo", "zebra", "camel", "bee", "spider", "deer"
   ],
   "Fruits": [
     "apple", "banana", "orange", "lemon", "grapes", "strawberry", "cherry", "peach",
     "pear", "watermelon", "pineapple", "mango", "kiwi", "plum", "coconut", "avocado",
-    "blueberry", "raspberry", "melon", "fig", "date", "apricot", "pomegranate", "lime",
-    "papaya"
+    "blueberry", "raspberry", "blackberry", "cranberry", "melon", "fig", "apricot",
+    "pomegranate", "lime", "papaya", "grapefruit", "tangerine"
+  ],
+  "Vegetables": [
+    "potato", "sweet potato", "tomato", "carrot", "onion", "cucumber", "cabbage",
+    "bell pepper", "garlic", "broccoli", "corn", "pumpkin", "spinach", "eggplant",
+    "mushroom", "lettuce", "cauliflower", "radish", "celery", "beetroot", "peas",
+    "zucchini", "beans", "leek", "turnip"
   ],
   "Professions": [
     "doctor", "teacher", "engineer", "police officer", "soldier", "chef", "driver",
@@ -19,125 +25,134 @@
     "builder", "firefighter"
   ],
   "Objects": [
-    "table", "chair", "bed", "door", "window", "television", "fridge", "computer",
-    "phone", "pen", "book", "bag", "watch", "mirror", "lamp", "umbrella", "bottle",
+    "table", "chair", "bed", "sofa", "door", "window", "television", "fridge", "clock",
+    "phone", "pen", "pencil", "book", "bag", "mirror", "lamp", "umbrella", "bottle",
     "cup", "plate", "spoon", "fork", "knife", "pan", "pillow", "carpet", "curtain",
-    "shelf", "scissors", "pencil", "wallet"
+    "shelf", "wallet", "candle", "towel", "toothbrush", "soap", "vase"
   ],
   "Transportation": [
-    "car", "bus", "train", "airplane", "ship", "bicycle", "motorcycle", "subway",
-    "taxi", "helicopter", "truck", "rocket", "boat", "tractor", "ambulance", "scooter",
-    "ferry", "van", "jeep", "motorboat", "school bus", "fire truck", "police car",
-    "skateboard", "train station", "airport", "ticket", "wheel", "engine", "traffic light"
+    "car", "bus", "train", "airplane", "ship", "bicycle", "motorcycle", "subway", "taxi",
+    "helicopter", "truck", "boat", "tractor", "ambulance", "scooter", "ferry", "van",
+    "jeep", "skateboard", "submarine", "tram", "canoe", "fire truck", "police car",
+    "school bus", "hot air balloon", "cable car", "train station", "airport",
+    "traffic light"
   ],
   "Places": [
-    "school", "hospital", "park", "market", "library", "museum", "restaurant", "cafe",
-    "stadium", "bank", "theater", "cinema", "hotel", "shop", "beach", "forest",
-    "mountain", "river", "lake", "city", "village", "street", "garden", "desert",
-    "island", "cave", "castle", "university", "pharmacy", "airport"
+    "school", "hospital", "park", "market", "supermarket", "library", "museum",
+    "restaurant", "cafe", "stadium", "bank", "theater", "cinema", "hotel", "shop",
+    "beach", "forest", "mountain", "river", "lake", "city", "village", "street",
+    "garden", "desert", "island", "cave", "university", "pharmacy", "zoo", "farm",
+    "post office", "gym"
+  ],
+  "Countries": [
+    "United States", "Canada", "Mexico", "Brazil", "Argentina", "Peru", "Spain", "France",
+    "Germany", "Italy", "Poland", "Ukraine", "Sweden", "Norway", "Iceland", "Netherlands",
+    "Switzerland", "Greece", "Turkey", "Egypt", "Morocco", "South Africa", "Russia",
+    "Kazakhstan", "China", "Japan", "South Korea", "India", "Thailand", "Australia"
   ],
   "Sports": [
-    "football", "basketball", "volleyball", "tennis", "swimming", "boxing", "wrestling",
-    "golf", "hockey", "running", "chess", "karate", "judo", "gymnastics", "skiing",
-    "rugby", "baseball", "badminton", "surfing", "climbing", "marathon", "cycling",
-    "handball", "weightlifting", "diving", "ball", "goal", "referee", "coach", "medal"
-  ],
-  "Adjectives": [
-    "big", "small", "hot", "cold", "fast", "slow", "beautiful", "ugly", "tall", "short",
-    "light", "heavy", "rich", "poor", "happy", "sad", "brave", "smart", "quiet", "old",
-    "young", "long", "deep", "dry", "wet", "clean", "dirty", "hard", "soft", "sweet"
+    "football", "basketball", "volleyball", "tennis", "table tennis", "badminton",
+    "swimming", "diving", "surfing", "boxing", "wrestling", "judo", "karate", "golf",
+    "hockey", "baseball", "rugby", "handball", "running", "marathon", "cycling", "skiing",
+    "skating", "climbing", "gymnastics", "weightlifting", "archery", "fencing", "chess",
+    "referee", "coach", "medal"
   ],
   "Spycraft": [
-    "spy", "agent", "password", "mission", "secret", "code name", "disguise", "passport",
-    "drone", "target", "map", "camera", "radio", "lock", "safe house", "danger",
-    "double agent", "hidden door", "footprint", "clue", "message", "alarm", "key",
-    "escape", "secret room", "briefcase", "sunglasses", "microphone", "tracking device",
-    "hidden camera"
+    "spy", "agent", "double agent", "mission", "secret", "code name", "disguise",
+    "passport", "drone", "target", "map", "camera", "hidden camera", "radio", "lock",
+    "safe house", "danger", "footprint", "fingerprint", "clue", "message", "alarm", "key",
+    "escape", "briefcase", "sunglasses", "microphone", "tracking device", "binoculars",
+    "invisible ink", "password"
   ],
   "Musical Instruments": [
-    "piano", "guitar", "violin", "drum", "flute", "trumpet", "saxophone", "harp",
-    "accordion", "keyboard", "tambourine", "cello", "banjo", "ukulele", "clarinet",
-    "harmonica", "bell", "cymbals", "microphone", "speaker", "headphones", "song",
-    "singer", "band", "orchestra", "concert", "music", "dance", "stage", "guitar pick"
+    "piano", "guitar", "bass guitar", "violin", "cello", "double bass", "harp", "drum",
+    "cymbals", "tambourine", "maracas", "castanets", "xylophone", "flute", "recorder",
+    "clarinet", "oboe", "saxophone", "trumpet", "trombone", "tuba", "accordion", "organ",
+    "synthesizer", "harmonica", "banjo", "mandolin", "ukulele", "bagpipes"
   ],
   "Space": [
-    "star", "planet", "satellite", "rocket", "comet", "Moon", "Sun", "Mars", "galaxy",
-    "astronaut", "orbit", "space station", "meteor", "telescope", "Earth", "Venus",
-    "Jupiter", "black hole", "spaceship", "alien", "spacesuit", "space helmet", "crater",
-    "universe", "spaceship window"
+    "star", "planet", "satellite", "rocket", "comet", "asteroid", "meteor", "Moon", "Sun",
+    "Mars", "Venus", "Jupiter", "Saturn", "Earth", "galaxy", "Milky Way", "solar system",
+    "universe", "black hole", "constellation", "eclipse", "orbit", "crater", "astronaut",
+    "spaceship", "space station", "spacesuit", "telescope", "alien"
   ],
   "Food": [
-    "pizza", "burger", "sandwich", "salad", "pasta", "sausage", "cake", "ice cream",
-    "chocolate", "honey", "cheese", "bread", "rice", "yogurt", "soup", "pancake",
-    "omelet", "cookie", "popcorn", "French fries", "fried chicken", "hot dog", "noodles",
-    "sushi", "toast", "jam", "butter", "egg", "dumpling", "pie"
+    "pizza", "burger", "hot dog", "sandwich", "salad", "pasta", "sausage", "steak",
+    "kebab", "taco", "sushi", "noodles", "rice", "soup", "dumpling", "French fries",
+    "fried chicken", "omelet", "egg", "bread", "toast", "pancake", "cheese", "butter",
+    "yogurt", "honey", "jam", "cake", "pie", "cookie", "donut", "chocolate", "ice cream",
+    "popcorn"
   ],
   "Feelings": [
-    "joy", "anger", "fear", "sadness", "surprise", "excitement", "shame", "calmness",
-    "hatred", "happiness", "loneliness", "hope", "envy", "curiosity", "love", "anxiety",
-    "embarrassment", "pride", "worry", "relief", "doubt", "admiration", "regret",
-    "gratitude", "jealousy"
+    "joy", "happiness", "excitement", "pride", "hope", "love", "gratitude", "admiration",
+    "relief", "calmness", "curiosity", "surprise", "fear", "anxiety", "worry", "anger",
+    "disgust", "sadness", "loneliness", "boredom", "confusion", "doubt", "regret",
+    "shame", "embarrassment", "envy", "jealousy", "nostalgia"
   ],
   "Fantasy": [
     "dragon", "fairy", "giant", "angel", "witch", "wizard", "ghost", "monster", "vampire",
-    "werewolf", "magic wand", "treasure", "magic spell", "secret door", "unicorn",
-    "fairy tale", "magic ring", "flying carpet", "talking animal", "magic mirror",
-    "haunted house", "invisible man", "magic sword", "cursed book", "hidden kingdom"
+    "werewolf", "zombie", "mermaid", "elf", "troll", "goblin", "unicorn", "phoenix",
+    "centaur", "genie", "magic wand", "magic ring", "magic potion", "magic mirror",
+    "magic sword", "crystal ball", "flying carpet", "haunted house", "secret door",
+    "cursed book", "treasure"
   ],
   "Weather": [
-    "rain", "snow", "storm", "lightning", "thunder", "fog", "hurricane", "flood", "hail",
-    "wind", "cloud", "rainbow", "heatwave", "frost", "sandstorm", "sunshine", "ice",
-    "snowstorm", "tornado", "drought", "puddle", "umbrella", "raincoat", "thunderstorm",
-    "weather forecast"
+    "rain", "drizzle", "snow", "snowstorm", "blizzard", "hail", "ice", "frost", "fog",
+    "cloud", "wind", "breeze", "storm", "thunderstorm", "thunder", "lightning",
+    "tornado", "hurricane", "sandstorm", "flood", "drought", "heatwave", "sunshine",
+    "rainbow", "puddle", "weather forecast"
   ],
   "Clothing": [
-    "shirt", "trousers", "hat", "skirt", "jacket", "suit", "sweater", "scarf", "socks",
-    "tie", "belt", "coat", "hoodie", "boots", "sandals", "gloves", "dress", "robe",
-    "shorts", "T-shirt", "jeans", "sneakers", "pajamas", "swimsuit", "slippers",
-    "sunglasses", "ring", "necklace", "watch", "backpack"
+    "shirt", "T-shirt", "trousers", "jeans", "shorts", "skirt", "dress", "suit", "jacket",
+    "coat", "raincoat", "sweater", "hoodie", "pajamas", "swimsuit", "robe", "hat", "cap",
+    "scarf", "gloves", "socks", "boots", "sandals", "sneakers", "slippers", "tie", "belt",
+    "watch", "earrings", "necklace", "bracelet"
   ],
   "Technology": [
-    "robot", "internet", "website", "software", "server", "keyboard", "monitor", "network",
-    "battery", "sensor", "chip", "laptop", "tablet", "GPS", "cable", "computer virus",
-    "password", "application", "code", "webcam", "headphones", "memory card", "USB drive",
-    "cloud storage", "Wi-Fi", "drone", "artificial intelligence", "printer", "mouse",
-    "charger"
+    "robot", "internet", "website", "email", "software", "application", "code", "server",
+    "network", "router", "Wi-Fi", "cloud storage", "artificial intelligence",
+    "computer virus", "computer", "laptop", "tablet", "smartwatch", "monitor", "keyboard",
+    "computer mouse", "printer", "webcam", "headphones", "speaker", "battery", "charger",
+    "cable", "memory card", "USB drive", "sensor", "chip", "GPS"
   ],
   "Toys and Games": [
-    "doll", "teddy bear", "yo-yo", "puzzle", "checkers", "dominoes", "kite", "spinning top",
-    "toy car", "building blocks", "board game", "balloon", "playing cards", "riddle",
-    "hide-and-seek", "chessboard", "toy train", "rubber duck", "action figure", "marbles",
-    "jump rope", "video game", "remote control car", "toy robot", "water gun"
+    "doll", "teddy bear", "action figure", "toy car", "toy train", "toy robot",
+    "remote control car", "building blocks", "puzzle", "board game", "chess set",
+    "checkers", "dominoes", "dice", "playing cards", "marbles", "yo-yo", "spinning top",
+    "kite", "balloon", "bubbles", "jump rope", "hide-and-seek", "video game", "water gun",
+    "rubber duck", "swing", "slide", "trampoline", "sandbox"
   ],
   "Buildings": [
-    "tower", "bridge", "tunnel", "fence", "balcony", "roof", "stairs", "house", "castle",
-    "apartment", "pyramid", "statue", "fountain", "column", "gate", "wall", "garage",
-    "skyscraper", "church", "mosque", "factory", "warehouse", "cabin", "barn", "lighthouse"
+    "house", "apartment", "mansion", "cabin", "hut", "igloo", "tent", "castle", "palace",
+    "fortress", "tower", "skyscraper", "lighthouse", "windmill", "pyramid", "church",
+    "mosque", "temple", "factory", "warehouse", "barn", "greenhouse", "bunker", "prison",
+    "bridge", "tunnel", "dam", "fountain", "statue"
   ],
   "Tools": [
-    "hammer", "saw", "drill", "nail", "clamp", "tape measure", "level", "tweezers",
-    "wrench", "screwdriver", "compass", "glue", "screw", "shovel", "axe", "pliers",
-    "scissors", "ladder", "brush", "bucket", "rope", "flashlight", "knife", "needle",
-    "sewing machine"
+    "hammer", "saw", "drill", "nail", "screw", "screwdriver", "wrench", "pliers", "clamp",
+    "tape measure", "spirit level", "chisel", "axe", "shovel", "rake", "ladder", "scissors",
+    "tweezers", "glue", "paintbrush", "paint roller", "bucket", "rope", "flashlight",
+    "needle", "sewing machine", "compass", "sandpaper", "wheelbarrow", "toolbox"
   ],
   "Events and Celebrations": [
-    "birthday", "wedding", "New Year", "festival", "concert", "exhibition", "fair",
-    "excursion", "party", "gathering", "anniversary", "ceremony", "carnival", "parade",
-    "graduation", "competition", "football match", "family dinner", "picnic", "barbecue",
-    "fireworks", "surprise party", "award ceremony", "school trip", "costume party"
+    "birthday", "wedding", "anniversary", "New Year", "Christmas", "Halloween",
+    "Valentine's Day", "graduation", "festival", "concert", "carnival", "parade",
+    "fireworks", "picnic", "barbecue", "family dinner", "housewarming", "baby shower",
+    "surprise party", "costume party", "farewell party", "reunion", "award ceremony",
+    "football match", "school trip"
   ],
   "School": [
-    "teacher", "student", "classroom", "desk", "blackboard", "whiteboard", "notebook",
-    "textbook", "homework", "exam", "test", "lesson", "break", "backpack", "pencil case",
-    "ruler", "eraser", "sharpener", "calculator", "library", "principal", "classmate",
-    "school bus", "report card", "graduation", "science lab", "school bell", "project",
-    "presentation", "school uniform"
+    "student", "classroom", "desk", "blackboard", "whiteboard", "chalk", "notebook",
+    "textbook", "dictionary", "homework", "exam", "test", "lesson", "timetable", "break",
+    "pencil case", "ruler", "eraser", "sharpener", "calculator", "backpack", "globe",
+    "principal", "classmate", "report card", "science lab", "school bell",
+    "school uniform", "project", "presentation", "playground"
   ],
   "Everyday Activities": [
-    "sleeping", "cooking", "eating", "drinking", "walking", "running", "reading", "writing",
-    "singing", "dancing", "swimming", "shopping", "cleaning", "washing", "driving",
-    "studying", "working", "playing", "traveling", "fishing", "painting", "drawing",
-    "gardening", "baking", "fishing", "cycling", "watching TV", "taking photos",
-    "making coffee", "brushing teeth"
+    "sleeping", "napping", "eating", "drinking", "cooking", "baking", "making coffee",
+    "washing", "cleaning", "ironing", "brushing teeth", "shaving", "walking", "driving",
+    "shopping", "working", "studying", "reading", "writing", "drawing", "painting",
+    "singing", "dancing", "playing", "traveling", "fishing", "gardening", "watching TV",
+    "taking photos", "talking on the phone"
   ]
 }

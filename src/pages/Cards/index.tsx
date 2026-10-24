@@ -4,6 +4,8 @@ import {
   words,
   MIN_PLAYERS,
   MAX_PLAYERS,
+  maxSpiesFor,
+  randomInt,
   type GameSettings,
 } from "../../game";
 import "../../App.css"; // shared theme (game-page, corner, start-button ...)
@@ -12,18 +14,37 @@ import "./Cards.css";
 // Strict check: the page opens only with valid data coming from Home
 const isValidSettings = (s: unknown): s is GameSettings => {
   if (!s || typeof s !== "object") return false;
-  const { category, players, time } = s as Record<string, unknown>;
+  const { category, word, players, spies, time, categoryHidden } = s as Record<
+    string,
+    unknown
+  >;
+
+  if (typeof category !== "string" || !Array.isArray(words[category])) {
+    return false;
+  }
+  if (typeof word !== "string" || !words[category].includes(word)) return false;
+
+  if (
+    typeof players !== "number" ||
+    !Number.isInteger(players) ||
+    players < MIN_PLAYERS ||
+    players > MAX_PLAYERS
+  ) {
+    return false;
+  }
+
+  if (
+    !Array.isArray(spies) ||
+    spies.length < 1 ||
+    spies.length > maxSpiesFor(players) ||
+    new Set(spies).size !== spies.length ||
+    !spies.every((i) => Number.isInteger(i) && i >= 0 && i < players)
+  ) {
+    return false;
+  }
 
   return (
-    typeof category === "string" &&
-    Array.isArray(words[category]) &&
-    words[category].length > 0 &&
-    typeof players === "number" &&
-    Number.isInteger(players) &&
-    players >= MIN_PLAYERS &&
-    players <= MAX_PLAYERS &&
-    typeof time === "number" &&
-    time > 0
+    typeof time === "number" && time > 0 && typeof categoryHidden === "boolean"
   );
 };
 
@@ -42,25 +63,25 @@ function Cards() {
 }
 
 function Game({ settings }: { settings: GameSettings }) {
-  const { category, players, time } = settings;
+  const { category, word, players, spies, time, categoryHidden } = settings;
   const navigate = useNavigate();
-
-  // picked once per game
-  const [secretWord] = useState(() => {
-    const list = words[category];
-    return list[Math.floor(Math.random() * list.length)];
-  });
-  const [spyIndex] = useState(() => Math.floor(Math.random() * players));
 
   const [current, setCurrent] = useState(0); // which player's card is on screen
   const [isOpen, setIsOpen] = useState(false); // card is face-up
   const [isDone, setIsDone] = useState(false); // player saw it and hid it again
   const [endAt, setEndAt] = useState<number | null>(null); // timer end timestamp
   const [secondsLeft, setSecondsLeft] = useState(time * 60);
+  const [startPlayer, setStartPlayer] = useState<number | null>(null); // who speaks first
+  const [confirmingStop, setConfirmingStop] = useState(false);
 
   const isLast = current === players - 1;
-  const isSpy = current === spyIndex;
+  const isSpy = spies.includes(current);
   const timerStarted = endAt !== null;
+
+  const spyCount = spies.length;
+  const spyLabel = spyCount === 1 ? "SPY" : "SPIES";
+  const shownCategory =
+    categoryHidden && !timerStarted ? "HIDDEN" : category.toUpperCase();
 
   // tap 1: reveal, tap 2: hide and lock (then "Next" appears)
   const handleCardClick = () => {
@@ -78,7 +99,8 @@ function Game({ settings }: { settings: GameSettings }) {
     if (!isDone) return;
 
     if (isLast) {
-      // START: timer begins now
+      // START: random first speaker + timer begins now
+      setStartPlayer(randomInt(players));
       setEndAt(Date.now() + time * 60 * 1000);
       return;
     }
@@ -86,6 +108,14 @@ function Game({ settings }: { settings: GameSettings }) {
     setCurrent((c) => c + 1);
     setIsOpen(false);
     setIsDone(false);
+  };
+
+  // Stop = same exit as the end of the timer (Finish page), different reason
+  const handleStop = () => {
+    navigate("/finish", {
+      replace: true,
+      state: { finished: true, reason: "stopped" },
+    });
   };
 
   // Timestamp-based timer: stays correct when the phone screen locks
@@ -100,7 +130,10 @@ function Game({ settings }: { settings: GameSettings }) {
       if (left === 0) {
         window.clearInterval(id);
         // replace: Back button can't return to the finished game
-        navigate("/finish", { replace: true, state: { finished: true } });
+        navigate("/finish", {
+          replace: true,
+          state: { finished: true, reason: "timeout" },
+        });
       }
     };
 
@@ -109,7 +142,9 @@ function Game({ settings }: { settings: GameSettings }) {
   }, [endAt, navigate]);
 
   const subtitle = timerStarted
-    ? "DISCUSS AND FIND THE SPY"
+    ? spyCount === 1
+      ? "DISCUSS AND FIND THE SPY"
+      : "DISCUSS AND FIND THE SPIES"
     : isDone
     ? isLast
       ? "ALL SET. PRESS START"
@@ -121,7 +156,7 @@ function Game({ settings }: { settings: GameSettings }) {
   const cardLabel = isOpen
     ? isSpy
       ? `Player ${current + 1} card: you are the spy`
-      : `Player ${current + 1} card: secret word ${secretWord}`
+      : `Player ${current + 1} card: secret word ${word}`
     : `Player ${current + 1} card`;
 
   return (
@@ -132,13 +167,20 @@ function Game({ settings }: { settings: GameSettings }) {
 
       <section className="game-container">
         <header className="game-header">
-          <span className="top-secret">
-            CLASSIFIED // {category.toUpperCase()}
-          </span>
+          <span className="top-secret">CLASSIFIED // {shownCategory}</span>
 
           <h1 className="cards-title">
-            {timerStarted ? "FIND THE SPY" : `PLAYER ${current + 1}`}
+            {timerStarted
+              ? spyCount === 1
+                ? "FIND THE SPY"
+                : "FIND THE SPIES"
+              : `PLAYER ${current + 1}`}
           </h1>
+
+          <p className="game-meta">
+            <strong>{spyCount}</strong> {spyLabel} · <strong>{players}</strong>{" "}
+            PLAYERS
+          </p>
 
           <p className="game-description">{subtitle}</p>
         </header>
@@ -172,7 +214,7 @@ function Game({ settings }: { settings: GameSettings }) {
                     ) : (
                       <>
                         <span className="card-role">SECRET WORD</span>
-                        <span className="card-word">{secretWord}</span>
+                        <span className="card-word">{word}</span>
                       </>
                     )}
                   </span>
@@ -200,15 +242,63 @@ function Game({ settings }: { settings: GameSettings }) {
             </button>
           </>
         ) : (
-          <div className="timer-box">
-            <span className="timer-label">TIME LEFT</span>
-            <span
-              className={`timer-value ${secondsLeft <= 10 ? "is-danger" : ""}`}
-              role="timer"
-              aria-live="off"
-            >
-              {formatTime(secondsLeft)}
-            </span>
+          <div className="timer-screen">
+            <div className="timer-box">
+              <span className="timer-label">TIME LEFT</span>
+              <span
+                className={`timer-value ${secondsLeft <= 10 ? "is-danger" : ""}`}
+                role="timer"
+                aria-live="off"
+              >
+                {formatTime(secondsLeft)}
+              </span>
+            </div>
+
+            <div className="starter-box">
+              <span className="starter-label">PLAYER TO START</span>
+              <span className="starter-value">{(startPlayer ?? 0) + 1}</span>
+            </div>
+
+            <div className="info-row">
+              <div className="info-item">
+                <span>CATEGORY</span>
+                <strong>{category}</strong>
+              </div>
+              <div className="info-item">
+                <span>{spyLabel}</span>
+                <strong>{spyCount}</strong>
+              </div>
+            </div>
+
+            {confirmingStop ? (
+              <div className="stop-confirm" role="group" aria-label="Confirm stop">
+                <p className="stop-question">STOP THE GAME?</p>
+                <div className="stop-actions">
+                  <button
+                    type="button"
+                    className="stop-button stop-yes"
+                    onClick={handleStop}
+                  >
+                    YES, STOP
+                  </button>
+                  <button
+                    type="button"
+                    className="stop-button"
+                    onClick={() => setConfirmingStop(false)}
+                  >
+                    KEEP PLAYING
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <button
+                type="button"
+                className="stop-button"
+                onClick={() => setConfirmingStop(true)}
+              >
+                STOP TIMER
+              </button>
+            )}
           </div>
         )}
       </section>

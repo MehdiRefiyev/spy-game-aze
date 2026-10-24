@@ -436,3 +436,200 @@ select {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================
+   APPEND THIS BLOCK TO THE END OF App.css
+   (it comes last, so it overrides the older font sizes)
+   ========================================================== */
+
+/* ===== Typography / readability ===== */
+.top-secret {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.game-description {
+  color: #c8c8c8;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 2px;
+}
+
+.setting-content > label {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.setting-content small {
+  color: #b0b0b0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.setting-content small[role="alert"] {
+  color: #ff6b72;
+  font-weight: 700;
+}
+
+.setting-content select {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.number-control input {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.time-button {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.start-button {
+  font-size: 16px;
+}
+
+.footer-note {
+  font-size: 10px;
+}
+
+/* ===== Random-category toggle ===== */
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  margin-bottom: 8px;
+}
+
+.toggle-row label {
+  color: #f3f3f3;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.toggle-row input {
+  position: relative;
+  flex-shrink: 0;
+  width: 46px;
+  height: 26px;
+  margin: 0;
+  border: 1px solid rgba(255, 32, 42, 0.65);
+  border-radius: 13px;
+  background: #111;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: background 180ms ease;
+}
+
+.toggle-row input::after {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--red);
+  content: "";
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+.toggle-row input:checked {
+  background: var(--red);
+}
+
+.toggle-row input:checked::after {
+  background: #090909;
+  transform: translateX(20px);
+}
+
+.toggle-row input:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}
+
+/* ===== Category chips (multi-select) ===== */
+.chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 188px;
+  padding: 2px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.chip-grid.is-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.chip {
+  min-height: 38px;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 32, 42, 0.7);
+  border-radius: 999px;
+  background: #0b0b0b;
+  color: #eee;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 180ms ease;
+}
+
+.chip:hover {
+  background: #26090b;
+}
+
+.chip.active {
+  border-color: var(--red);
+  background: var(--red);
+  color: #090909;
+  font-weight: 700;
+}
+
+.chip:disabled {
+  cursor: not-allowed;
+}
+
+/* ===== Category preview (visually different from gameplay) ===== */
+.category-preview {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.category-preview-title {
+  display: block;
+  margin-bottom: 8px;
+  color: #c8c8c8;
+  font-family: "Orbitron", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.category-preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-preview-list li {
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #1c1c1c;
+  color: #e6e6e6;
+  font-size: 14px;
+  font-weight: 600;
+}
